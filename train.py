@@ -131,7 +131,7 @@ if __name__ == '__main__':
         device = torch.device('cpu')
 
     parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
-    parser.add_argument('--exp_name', default='exp3_aug2_norm', type=str, help='Experiment name')
+    parser.add_argument('--exp_name', default='exp4_biggerResNet', type=str, help='Experiment name')
     parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
     parser.add_argument('--resume', '-r', action='store_true',
                         help='resume from checkpoint')
