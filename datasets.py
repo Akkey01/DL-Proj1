@@ -87,11 +87,7 @@ transform_train_old = transforms.Compose([
 
 transform_test = transforms.Compose([
     transforms.ToTensor(),
-    #transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.2435, 0.2616)),
-    transforms.Normalize((0.4438,0.4361,0.4058),(0.2775,0.2736,0.2819)),
-    transforms.Normalize((0.1767,0.1746,0.1671),(0.8248,0.8233,0.8016)),
-    transforms.Normalize((0.0596, 0.0582, 0.0527),(1.0142, 1.0138, 1.0085)),
-
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
     ])
 
 transform_train = transforms.Compose([
@@ -99,9 +95,6 @@ transform_train = transforms.Compose([
     transforms.RandomHorizontalFlip(p=0.5),
     transforms.RandAugment(num_ops=2, magnitude=9),
     transforms.ToTensor(),
-    #transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.2435, 0.2616)),
-    transforms.Normalize((0.4438,0.4361,0.4058),(0.2775,0.2736,0.2819)),
-    transforms.Normalize((0.1767,0.1746,0.1671),(0.8248,0.8233,0.8016)),
-    transforms.Normalize((0.0596, 0.0582, 0.0527),(1.0142, 1.0138, 1.0085)),
     transforms.RandomErasing(p=0.2, scale=(0.02, 0.2)),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
